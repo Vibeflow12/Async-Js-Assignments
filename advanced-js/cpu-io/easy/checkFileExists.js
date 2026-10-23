@@ -10,6 +10,24 @@
 
 const fs = require("fs").promises;
 
-async function checkFileExists(path) {}
+async function checkFileExists(path) {
+  let ff = await fs.promises.acc
+
+
+}
 
 module.exports = checkFileExists;
+
+
+// import { access } from 'node:fs/promises';
+// import { constants } from 'node:fs';
+
+// async function checkAccess() {
+//   try {
+//     // Checks if the file exists and is readable
+//     await access('config.json', constants.F_OK | constants.R_OK);
+//     console.log('File exists and is readable!');
+//   } catch (error) {
+//     console.error('Cannot access file:', error.message);
+//   }
+// }

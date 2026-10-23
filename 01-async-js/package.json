@@ -1,6 +1,7 @@
 {
   "name": "01-async",
   "version": "1.0.0",
+  "type": "module",
   "description": "This folder contains assignments related to asynchronous JavaScript.",
   "main": "index.js",
   "scripts": {

@@ -4,10 +4,10 @@
   1. `fibonacci` (Iterative Version):
      - Takes an integer `n` as input and returns an array containing the first `n` numbers in the Fibonacci sequence.
      - The Fibonacci sequence is calculated iteratively.
-  
+
   2. `fibonacciRecursive` (Recursive Version):
      - Takes an integer `n` as input and returns the `n`-th number in the Fibonacci sequence using recursion.
-  
+
   What is the Fibonacci sequence?
   - The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding numbers.
 
@@ -15,7 +15,7 @@
   - Input: 10
   - Output (Iterative): [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
   - Output (Recursive): 34
-  
+
   - Input: 5
   - Output (Iterative): [0, 1, 1, 2, 3]
   - Output (Recursive): 3
@@ -23,7 +23,7 @@
   - Input: 1
   - Output (Iterative): [0]
   - Output (Recursive): 0
-  
+
   - Input: 0
   - Output (Iterative): []
   - Output (Recursive): 0
@@ -40,13 +40,29 @@
 // Iterative Fibonacci function
 function fibonacci(n) {
   // Your code here
+
+  if (n <= 0) return []
+
+  let answerArr = [0];
+
+  if (n > 1) {
+    answerArr.push(1)
+  }
+
+  for (let i = 2; i < n; i++) {
+    let a = answerArr[answerArr.length - 1] + answerArr[answerArr.length - 2]
+    answerArr.push(a)
+  }
+  return answerArr;
 }
 
 // Recursive Fibonacci function
 function fibonacciRecursive(n) {
   // Your code here
+  if(n === 0) return 0
+  if(n === 1) return 1
+
+  return fibonacciRecursive(n-1) + fibonacciRecursive(n -2)
 }
 
 module.exports = { fibonacci, fibonacciRecursive };
-
-
